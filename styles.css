@@ -1,0 +1,145 @@
+/* Allgemeines Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    position: relative;
+    background: url('https://images.pexels.com/photos/3184450/pexels-photo-3184450.jpeg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 117, 252, 0.6), rgba(106, 17, 203, 0.6));
+    z-index: 1;
+}
+
+.header-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2575fc;
+}
+
+/* Hero */
+.hero {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background: #2575fc;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1b5bcc;
+}
+
+.btn-secondary {
+    background: white;
+    color: #2575fc;
+    border: 2px solid #2575fc;
+}
+
+.btn-secondary:hover {
+    background: #2575fc;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
+
+footer a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
